@@ -5,6 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Bouyagui Diakite — Développeur Backend NestJS &amp; Laravel</title>
     <meta name="description" content="Portfolio de Bouyagui Diakite, développeur backend NestJS et Laravel basé à Nouakchott. Projets, compétences et contact.">
+    <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://bouyaguidiakite-portfolio.netlify.app/">
+    <meta property="og:title" content="Bouyagui Diakite — Développeur Backend NestJS &amp; Laravel">
+    <meta property="og:description" content="Développeur backend à Nouakchott. API REST, applications Laravel, NestJS et React : découvrez mes projets.">
+    <meta property="og:image" content="https://bouyaguidiakite-portfolio.netlify.app/images/og.png">
+    <meta property="og:locale" content="fr_FR">
+    <meta name="twitter:card" content="summary_large_image">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap" rel="stylesheet">
@@ -21,8 +29,9 @@
                     <button class="hamburger" aria-label="Ouvrir le menu" aria-expanded="false"><span class="bar"></span></button>
                     <ul>
                         <li><a href="#hero" data-after="Accueil">Accueil</a></li>
-                        <li><a href="#services" data-after="Services">Services</a></li>
+                        <li><a href="#parcours" data-after="Parcours">Parcours</a></li>
                         <li><a href="#projets" data-after="Projets">Projets</a></li>
+                        <li><a href="#competences" data-after="Compétences">Compétences</a></li>
                         <li><a href="#about" data-after="À propos">À propos</a></li>
                         <li><a href="#contact" data-after="Contact">Contact</a></li>
                     </ul>
@@ -36,23 +45,180 @@
  <section id="hero">
         <div class="banner container">
             <div>
+                <span class="hero-badge"><span class="dot"></span>Ouvert aux opportunités</span>
                 <h1>Salut,<span></span></h1>
                 <h1>je m'appelle <span></span></h1>
                 <h1>Bouyagui <span></span></h1>
                 <p class="hero-role">Développeur Backend — NestJS &amp; Laravel</p>
-                <a href="#projets" class="ctn">Voir mes projets</a>
+                <div class="hero-actions">
+                    <a href="CV_Bouyagui_Diakite_2026.pdf" class="ctn ctn-primary" download>Télécharger mon CV</a>
+                    <a href="#contact" class="ctn">Me contacter</a>
+                </div>
             </div>
         </div>
  </section>
  <!--------------------------end section banniere-------------------------------------->
 
 
- <!-------------------------------------service section---------------------------->
-<section id="services">
-    <div class="services section">
+ 
+
+
+ <!--section parcours-->
+<section id="parcours">
+    <div class="parcours section">
         <div class="section-head">
-            <span class="eyebrow">Ce que je fais</span>
-            <h2 class="section-title">Mes services</h2>
+            <span class="eyebrow">Expérience</span>
+            <h2 class="section-title">Mon parcours</h2>
+        </div>
+        <ol class="timeline">
+            <li class="timeline-item current">
+                <span class="timeline-date">Juin 2026 — aujourd'hui</span>
+                <h3>Développeur Backend</h3>
+                <span class="timeline-org">Faci-lity · Nouakchott</span>
+                <p>Seul développeur backend d'une équipe de 4 (chef de projet, développeurs web et mobile).
+                    Je conçois et développe l'API REST qui alimente les applications web et mobiles
+                    d'une plateforme logistique et FinTech, avec un workflow Git par pull requests et revue de code.</p>
+                <ul class="tags"><li>NestJS</li><li>TypeScript</li><li>Node.js</li></ul>
+            </li>
+            <li class="timeline-item">
+                <span class="timeline-date">Déc. 2023 — juin 2026</span>
+                <h3>Agent service client, puis agent cargo</h3>
+                <span class="timeline-org">Afroport Mauritanie · Aéroport de Nouakchott</span>
+                <p>Gestion et suivi des opérations de fret dans le respect des procédures et des délais,
+                    coordination entre les services de l'aéroport. Une connaissance du terrain qui a nourri CargoFlow.</p>
+            </li>
+            <li class="timeline-item">
+                <span class="timeline-date">Avr. 2022 — nov. 2022</span>
+                <h3>Développeur front-end (stage)</h3>
+                <span class="timeline-org">Gitech · Dakar</span>
+                <p>Création d'interfaces web responsives en collaboration avec l'équipe design.</p>
+            </li>
+            <li class="timeline-item">
+                <span class="timeline-date">Juin 2021 — sept. 2021</span>
+                <h3>Développeur web junior</h3>
+                <span class="timeline-org">Promobile · Dakar</span>
+                <p>Participation au développement et à la maintenance d'applications web.</p>
+            </li>
+            <li class="timeline-item">
+                <span class="timeline-date">2019 — 2022</span>
+                <h3>Licence en Génie logiciel et Administration réseau</h3>
+                <span class="timeline-org">ESTM · Dakar</span>
+            </li>
+        </ol>
+    </div>
+</section>
+ <!-- end section parcours-->
+
+ <!--section projets-->
+<section id="projets">
+    <div class="projets section">
+        <div class="section-head">
+            <span class="eyebrow">Réalisations</span>
+            <h2 class="section-title">Mes projets récents</h2>
+        </div>
+        <div class="projet-grid">
+            <article class="projet-card featured">
+                <div class="projet-img"><img src="./images/projets/rukhsati.jpg" alt="Page d'accueil de Rukhsati" loading="lazy"></div>
+                <div class="projet-body">
+                    <h3>Rukhsati</h3>
+                    <p>Plateforme de dématérialisation des agréments commerciaux et touristiques : dépôt de la demande en ligne,
+                        suivi de l'instruction en temps réel, workflow multi-rôles (opérateur, guichet, inspecteur, directeur)
+                        et agrément PDF avec QR code vérifiable. Bilingue français / arabe.</p>
+                    <ul class="points">
+                        <li>Moteur de workflow en machine à états, rôles opérateur / guichet / inspecteur / directeur</li>
+                        <li>Agrément PDF généré côté serveur avec QR code vérifiable publiquement</li>
+                        <li>Types d'agréments configurables en base, sans redéploiement</li>
+                        <li>Tests Feature couvrant le parcours complet d'une demande</li>
+                    </ul>
+                    <ul class="tags"><li>Laravel</li><li>React</li><li>Sanctum</li><li>Tailwind</li></ul>
+                    <div class="projet-links">
+                        <a href="https://github.com/Bouyagui-diakite/rukhsati" target="_blank" rel="noopener">Code</a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="projet-card">
+                <div class="projet-img"><img src="./images/projets/cargoflow.jpg" alt="Tableau de bord de CargoFlow" loading="lazy"></div>
+                <div class="projet-body">
+                    <h3>CargoFlow</h3>
+                    <p>Panneau d'administration pour le fret aérien : gestion des LTA (AWB), conformité marchandises dangereuses IATA,
+                        génération de NOTOC, suivi des vols et contrôle d'accès par rôles.</p>
+                    <ul class="points">
+                        <li>Rôles et permissions avec spatie/laravel-permission</li>
+                        <li>Journal d'audit des actions avec spatie/laravel-activitylog</li>
+                        <li>Documents PDF générés côté serveur : LTA, NOTOC, manifestes de vol (DomPDF)</li>
+                    </ul>
+                    <ul class="tags"><li>Laravel</li><li>React</li><li>Tailwind</li><li>Recharts</li></ul>
+                    <div class="projet-links">
+                        <a href="https://github.com/Bouyagui-diakite/CargoFlow" target="_blank" rel="noopener">Code</a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="projet-card">
+                <div class="projet-img"><img src="./images/projets/rimarch.jpg" alt="Tableau de bord de RIMArch" loading="lazy"></div>
+                <div class="projet-body">
+                    <h3>RIMArch</h3>
+                    <p>Système de gestion documentaire et d'archivage : dépôt et classement des documents, partage par lien,
+                        corbeille, journal d'activité et gestion des utilisateurs.</p>
+                    <ul class="points">
+                        <li>API REST sécurisée par Sanctum, rôles et permissions testés</li>
+                        <li>Liens de partage par jeton, corbeille et journal d'activité</li>
+                        <li>Exports PDF / CSV et emails transactionnels (Resend)</li>
+                    </ul>
+                    <ul class="tags"><li>Laravel 11</li><li>React 19</li><li>Tailwind</li><li>MySQL</li></ul>
+                    <div class="projet-links">
+                        <a href="https://github.com/Bouyagui-diakite/RimArch" target="_blank" rel="noopener">Code</a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="projet-card">
+                <div class="projet-img"><img src="./images/projets/rimconsul.jpg" alt="Tableau de bord de RimConsul" loading="lazy"></div>
+                <div class="projet-body">
+                    <h3>RimConsul</h3>
+                    <p>Plateforme de gestion des cartes consulaires pour les ressortissants des pays africains :
+                        demandes, prise de rendez-vous et tableau de bord des agents consulaires.</p>
+                    <ul class="points">
+                        <li>Sécurité des données au niveau de la base (Row Level Security)</li>
+                        <li>Création atomique des demandes et références sans collision (fonctions SQL)</li>
+                        <li>Contrainte d'unicité contre la double réservation des créneaux</li>
+                    </ul>
+                    <ul class="tags"><li>Next.js</li><li>TypeScript</li><li>Supabase</li></ul>
+                    <div class="projet-links">
+                        <a href="https://github.com/Bouyagui-diakite/RimConsul" target="_blank" rel="noopener">Code</a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="projet-card">
+                <div class="projet-img"><img src="./images/projets/cyber-rim.jpg" alt="Page d'accueil de Cyber-Rim 2149" loading="lazy"></div>
+                <div class="projet-body">
+                    <h3>Cyber-Rim 2149</h3>
+                    <p>Boutique en ligne de jeux vidéo et de matériel gaming : catalogue filtrable, fiches produits, panier,
+                        commande et compte client. Interface animée, trilingue français / anglais / arabe.</p>
+                    <ul class="points">
+                        <li>Internationalisation avec i18next, y compris l'arabe en RTL</li>
+                        <li>Panier et authentification gérés par contexte React</li>
+                        <li>Transitions de pages animées avec Framer Motion</li>
+                    </ul>
+                    <ul class="tags"><li>React</li><li>Material UI</li><li>Framer Motion</li><li>i18next</li></ul>
+                    <div class="projet-links">
+                        <a href="https://github.com/Bouyagui-diakite/Cyber-Rim2149" target="_blank" rel="noopener">Code</a>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </div>
+</section>
+ <!-- end section projets-->
+
+ <!--section competences-->
+<section id="competences">
+    <div class="competences section">
+        <div class="section-head">
+            <span class="eyebrow">Stack technique</span>
+            <h2 class="section-title">Mes compétences</h2>
             <p>Je conçois des API fiables pour de vrais processus métier, et je sais aussi construire l'interface qui va avec.</p>
         </div>
         <div class="service-grid">
@@ -79,85 +245,7 @@
         </div>
     </div>
 </section>
- <!-- end service section-->
-
- <!--section projets-->
-<section id="projets">
-    <div class="projets section">
-        <div class="section-head">
-            <span class="eyebrow">Réalisations</span>
-            <h2 class="section-title">Mes projets récents</h2>
-        </div>
-        <div class="projet-grid">
-            <article class="projet-card featured">
-                <div class="projet-img"><img src="./images/projets/rukhsati.jpg" alt="Page d'accueil de Rukhsati" loading="lazy"></div>
-                <div class="projet-body">
-                    <h3>Rukhsati</h3>
-                    <p>Plateforme de dématérialisation des agréments commerciaux et touristiques : dépôt de la demande en ligne,
-                        suivi de l'instruction en temps réel, workflow multi-rôles (opérateur, guichet, inspecteur, directeur)
-                        et agrément PDF avec QR code vérifiable. Bilingue français / arabe.</p>
-                    <ul class="tags"><li>Laravel</li><li>React</li><li>Sanctum</li><li>Tailwind</li></ul>
-                    <div class="projet-links">
-                        <a href="https://github.com/Bouyagui-diakite/rukhsati" target="_blank" rel="noopener">Code</a>
-                    </div>
-                </div>
-            </article>
-
-            <article class="projet-card">
-                <div class="projet-img"><img src="./images/projets/cargoflow.jpg" alt="Tableau de bord de CargoFlow" loading="lazy"></div>
-                <div class="projet-body">
-                    <h3>CargoFlow</h3>
-                    <p>Panneau d'administration pour le fret aérien : gestion des LTA (AWB), conformité marchandises dangereuses IATA,
-                        génération de NOTOC, suivi des vols et contrôle d'accès par rôles.</p>
-                    <ul class="tags"><li>Laravel</li><li>React</li><li>Tailwind</li><li>Recharts</li></ul>
-                    <div class="projet-links">
-                        <a href="https://github.com/Bouyagui-diakite/CargoFlow" target="_blank" rel="noopener">Code</a>
-                    </div>
-                </div>
-            </article>
-
-            <article class="projet-card">
-                <div class="projet-img"><img src="./images/projets/rimarch.jpg" alt="Tableau de bord de RIMArch" loading="lazy"></div>
-                <div class="projet-body">
-                    <h3>RIMArch</h3>
-                    <p>Système de gestion documentaire et d'archivage : dépôt et classement des documents, partage par lien,
-                        corbeille, journal d'activité et gestion des utilisateurs.</p>
-                    <ul class="tags"><li>Laravel 11</li><li>React 19</li><li>Tailwind</li><li>MySQL</li></ul>
-                    <div class="projet-links">
-                        <a href="https://github.com/Bouyagui-diakite/RimArch" target="_blank" rel="noopener">Code</a>
-                    </div>
-                </div>
-            </article>
-
-            <article class="projet-card">
-                <div class="projet-img"><img src="./images/projets/rimconsul.jpg" alt="Tableau de bord de RimConsul" loading="lazy"></div>
-                <div class="projet-body">
-                    <h3>RimConsul</h3>
-                    <p>Plateforme de gestion des cartes consulaires pour les ressortissants des pays africains :
-                        demandes, prise de rendez-vous et tableau de bord des agents consulaires.</p>
-                    <ul class="tags"><li>Next.js</li><li>TypeScript</li><li>Supabase</li></ul>
-                    <div class="projet-links">
-                        <a href="https://github.com/Bouyagui-diakite/RimConsul" target="_blank" rel="noopener">Code</a>
-                    </div>
-                </div>
-            </article>
-
-            <article class="projet-card">
-                <div class="projet-img"><img src="./images/projets/cyber-rim.jpg" alt="Page d'accueil de Cyber-Rim 2149" loading="lazy"></div>
-                <div class="projet-body">
-                    <h3>Cyber-Rim 2149</h3>
-                    <p>Boutique en ligne de jeux vidéo et de matériel gaming : catalogue filtrable, fiches produits, panier,
-                        commande et compte client. Interface animée, trilingue français / anglais / arabe.</p>
-                    <ul class="tags"><li>React</li><li>Material UI</li><li>Framer Motion</li><li>i18next</li></ul>
-                    <div class="projet-links">
-                        <a href="https://github.com/Bouyagui-diakite/Cyber-Rim2149" target="_blank" rel="noopener">Code</a>
-                    </div>
-                </div>
-            </article>
-        </div>
-    </div>
-</section>
- <!-- end section projets-->
+ <!-- end section competences-->
 
 
  <!--  section about-->

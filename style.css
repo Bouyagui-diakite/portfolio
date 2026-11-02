@@ -103,6 +103,14 @@ p{
     color: white;
     background-color: var(--accent);
 }
+.ctn-primary{
+    color: white;
+    background-color: var(--accent);
+}
+.ctn-primary:hover{
+    background-color: #e5533a;
+    border-color: #e5533a;
+}
 
 .brand{
     font-size: 2rem;
@@ -274,18 +282,17 @@ p{
     font-size: 4rem;
     position: relative;
     color: transparent;
-    animation: text_reveal .5s ease forwards;
-    animation-delay: 1s;
+    animation: text_reveal .3s ease forwards;
 }
-#hero h1:nth-child(1){
-    animation-delay: 1s;
+#hero h1:nth-of-type(1){
+    animation-delay: .5s;
 }
-#hero h1:nth-child(2){
-    animation-delay: 2s;
+#hero h1:nth-of-type(2){
+    animation-delay: .9s;
 }
-#hero h1:nth-child(3){
-    animation: text_reveal_name .5s ease forwards;
-    animation-delay: 3s;
+#hero h1:nth-of-type(3){
+    animation: text_reveal_name .3s ease forwards;
+    animation-delay: 1.3s;
 }
 #hero h1 span{
     position: absolute;
@@ -294,26 +301,57 @@ p{
     height: 100%;
     width: 0;
     background-color: var(--accent);
-    animation: text_reveal_box 1s ease;
-    animation-delay: .5s;
+    animation: text_reveal_box .6s ease;
 }
-#hero h1:nth-child(1) span{
-    animation-delay: .5s;
+#hero h1:nth-of-type(1) span{
+    animation-delay: .2s;
 }
-#hero h1:nth-child(2) span{
-    animation-delay: 1.5s;
+#hero h1:nth-of-type(2) span{
+    animation-delay: .6s;
 }
-#hero h1:nth-child(3) span{
-    animation-delay: 2.5s;
+#hero h1:nth-of-type(3) span{
+    animation-delay: 1s;
+}
+#hero .hero-role,
+#hero .hero-actions{
+    opacity: 0;
+    animation: fade_in .6s ease forwards;
+    animation-delay: 1.6s;
 }
 #hero .hero-role{
     color: white;
     font-size: 1.8rem;
     letter-spacing: .1rem;
     margin-top: 20px;
-    opacity: 0;
-    animation: fade_in .8s ease forwards;
-    animation-delay: 3.5s;
+}
+#hero .hero-actions{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 30px;
+}
+#hero .hero-actions .ctn{
+    margin-top: 0;
+}
+.hero-badge{
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 20px;
+    padding: 6px 14px;
+    border: 1px solid rgba(255, 255, 255, .25);
+    border-radius: 999px;
+    background-color: rgba(255, 255, 255, .08);
+    color: white;
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+.hero-badge .dot{
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #34d399;
+    box-shadow: 0 0 0 3px rgba(52, 211, 153, .3);
 }
 
 @keyframes text_reveal_box{
@@ -356,7 +394,9 @@ p{
 
 
 /*section services*/
-#services{
+#parcours,
+#competences,
+#contact{
     background-color: var(--bg-alt);
 }
 .service-grid{
@@ -396,6 +436,72 @@ p{
     margin-bottom: 10px;
 }
 /* end section services*/
+
+
+/*section parcours*/
+.timeline{
+    list-style: none;
+    max-width: 760px;
+    margin: 0 auto;
+    position: relative;
+    padding-left: 30px;
+}
+.timeline::before{
+    content: '';
+    position: absolute;
+    left: 6px;
+    top: 8px;
+    bottom: 8px;
+    width: 2px;
+    background-color: var(--border);
+}
+.timeline-item{
+    position: relative;
+    padding-bottom: 40px;
+}
+.timeline-item:last-child{
+    padding-bottom: 0;
+}
+.timeline-item::before{
+    content: '';
+    position: absolute;
+    left: -30px;
+    top: 4px;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background-color: white;
+    border: 2px solid var(--dark-2);
+}
+.timeline-item.current::before{
+    background-color: var(--accent);
+    border-color: var(--accent);
+    box-shadow: 0 0 0 5px rgba(255, 99, 71, .2);
+}
+.timeline-date{
+    display: block;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--accent);
+    letter-spacing: .05rem;
+    margin-bottom: 6px;
+}
+.timeline-item h3{
+    font-size: 1.9rem;
+    font-weight: 600;
+}
+.timeline .tags li{
+    background-color: white;
+    border: 1px solid var(--border);
+}
+.timeline-org{
+    display: block;
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: var(--dark-2);
+    margin: 4px 0 10px;
+}
+/* end section parcours*/
 
 
 /*section projets*/
@@ -455,6 +561,26 @@ p{
     font-weight: 600;
     margin-bottom: 10px;
 }
+.points{
+    margin-top: 15px;
+}
+.points li{
+    position: relative;
+    padding-left: 22px;
+    margin-bottom: 6px;
+    font-size: 1.4rem;
+    line-height: 1.6;
+    color: var(--text);
+}
+.points li::before{
+    content: '';
+    position: absolute;
+    left: 2px;
+    top: .7em;
+    width: 8px;
+    height: 2px;
+    background-color: var(--accent);
+}
 .tags{
     display: flex;
     flex-wrap: wrap;
@@ -494,9 +620,6 @@ p{
 
 
 /* section a propos*/
-#about{
-    background-color: var(--bg-alt);
-}
 .about{
     display: flex;
     flex-direction: column;
@@ -554,6 +677,7 @@ p{
     gap: 20px;
 }
 .contact-item{
+    background-color: white;
     display: flex;
     align-items: center;
     gap: 20px;
