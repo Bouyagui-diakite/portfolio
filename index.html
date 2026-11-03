@@ -289,6 +289,7 @@
             <span class="eyebrow">Travaillons ensemble</span>
             <h2 class="section-title">Contact</h2>
         </div>
+        <div class="contact-layout">
         <div class="contact-items">
             <div class="contact-item">
                 <div class="icon"><img src="images/icons8-phone-64.png" alt=""></div>
@@ -314,6 +315,33 @@
                     <span>Nouakchott, Mauritanie</span>
                 </div>
             </div>
+        </div>
+
+        <form class="contact-form" id="contact-form" action="https://api.web3forms.com/submit" method="POST">
+            <!-- clé publique Web3Forms : les messages arrivent sur bouyaguidiakite2@gmail.com -->
+            <input type="hidden" name="access_key" value="1512778f-2d88-4414-a1f5-3ca4e0561b0a">
+            <input type="hidden" name="subject" value="Nouveau message depuis le portfolio">
+            <input type="hidden" name="from_name" value="Portfolio Bouyagui Diakite">
+            <input type="checkbox" name="botcheck" class="botcheck" tabindex="-1" autocomplete="off">
+
+            <h3>Envoyez-moi un message</h3>
+            <div class="form-row">
+                <label>Nom
+                    <input type="text" name="name" required autocomplete="name">
+                </label>
+                <label>Email
+                    <input type="email" name="email" required autocomplete="email">
+                </label>
+            </div>
+            <label><span>Entreprise <span class="optional">(facultatif)</span></span>
+                <input type="text" name="entreprise" autocomplete="organization">
+            </label>
+            <label>Message
+                <textarea name="message" rows="5" required></textarea>
+            </label>
+            <button type="submit" class="ctn ctn-primary">Envoyer</button>
+            <p class="form-status" role="status" aria-live="polite"></p>
+        </form>
         </div>
     </div>
 </section>
