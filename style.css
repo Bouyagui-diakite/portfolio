@@ -193,6 +193,19 @@ p{
 #header .nav-list ul li:hover a{
     color: var(--accent);
 }
+/* sélecteur de langue : la langue courante en gras, l'autre atténuée */
+#header .nav-list ul .lang-switch a{
+    color: rgba(255, 255, 255, .6);
+}
+#header .nav-list ul .lang-switch strong{
+    color: white;
+}
+#header .nav-list ul .lang-switch:hover span{
+    color: var(--accent);
+}
+#header .nav-list ul .lang-switch a::after{
+    display: none;
+}
 
 #header .hamburger{
     background: none;
